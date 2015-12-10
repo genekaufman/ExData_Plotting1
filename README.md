@@ -10,3 +10,5 @@ Files include:
 
 * <b>[plot2.R](plot2.R)</b>: uses <b>get_power_data_file.R</b> to produce a line graph and output to [plot2.png](plot2.png)
 
+* <b>[plot3.R](plot3.R)</b>: uses <b>get_power_data_file.R</b> to produce a multiline graph and output to [plot3.png](plot3.png)
+
