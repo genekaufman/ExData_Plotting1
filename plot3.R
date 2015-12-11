@@ -1,4 +1,4 @@
-# plot3.R - this file will re-produce the line chart as a
+# plot3.R - this file will re-produce the multi-line chart as a
 #   png file named plot3.png
 #
 # if we don't have the data available, then go get it
@@ -8,10 +8,12 @@ if (!exists("mydf")) {
 
 # set pngOutput to false to write to screen
 pngOutput<-TRUE
+
 # legend box type is drawn in plot3, but not in plot4
 legendBty<-"o"
+
 # force screen output when included in plot4.R
-if (exists("calledFromPlot4")) { 
+if (exists("calledFromPlot4")) {
   message("plot3 called from plot4!!!")
   pngOutput<-FALSE
   legendBty<-"n"

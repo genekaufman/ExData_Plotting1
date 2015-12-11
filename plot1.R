@@ -7,7 +7,7 @@ if (!exists("mydf")) {
 }
 
 # set pngOutput to false to write to screen
-pngOutput<-FALSE
+pngOutput<-TRUE
 if (pngOutput) {
   png(file="plot1.png")
 }

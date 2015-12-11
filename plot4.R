@@ -6,6 +6,7 @@
 if (!exists("mydf")) {
   source('get_power_data_file.R')
 }
+
 calledFromPlot4<-TRUE
 # set pngOutput to false to write to screen
 plot4pngOutput<-TRUE
@@ -13,9 +14,10 @@ if (plot4pngOutput) {
   png(file="plot4.png")
 }
 
-par(mfcol=c(2,2))
-
 # Time to actually create the graph
+
+# set up a 2x2 col-filled graph
+par(mfcol=c(2,2))
 
 # Same as plot2
 source("plot2.R")
@@ -30,6 +32,7 @@ with(mydf,
           xlab="datetime",
           ylab="Voltage"
      ))
+
 with(mydf,
      plot(DateTime,Global_reactive_power,
           type="l",
@@ -37,6 +40,7 @@ with(mydf,
           xlab="datetime",
           ylab="Global_reactive_power"
      ))
+
 # closes the png device if necessary
 if (plot4pngOutput) {
   dev.off()

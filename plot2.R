@@ -8,12 +8,13 @@ if (!exists("mydf")) {
 
 # set pngOutput to false to write to screen
 pngOutput<-TRUE
+
 # the y axis label is slightly different from plot2 and the version
 # of this chart in plot4
 ylabel<-"Global Active Power (kilowatts)"
 
 # force screen output when included in plot4.R
-if (exists("calledFromPlot4")) { 
+if (exists("calledFromPlot4")) {
   message("plot2 called from plot4!!!")
   pngOutput<-FALSE
   ylabel<-"Global Active Power"

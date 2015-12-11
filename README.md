@@ -12,3 +12,4 @@ Files include:
 
 * <b>[plot3.R](plot3.R)</b>: uses <b>get_power_data_file.R</b> to produce a multiline graph and output to [plot3.png](plot3.png)
 
+* <b>[plot4.R](plot4.R)</b>: uses <b>get_power_data_file.R</b>, <b>plot2.R</b> and <b>plot3.R</b> to produce a multi-chart graph and output to [plot4.png](plot4.png)
