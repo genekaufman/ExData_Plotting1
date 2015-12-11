@@ -8,6 +8,14 @@ if (!exists("mydf")) {
 
 # set pngOutput to false to write to screen
 pngOutput<-TRUE
+# legend box type is drawn in plot3, but not in plot4
+legendBty<-"o"
+# force screen output when included in plot4.R
+if (exists("calledFromPlot4")) { 
+  message("plot3 called from plot4!!!")
+  pngOutput<-FALSE
+  legendBty<-"n"
+}
 if (pngOutput) {
   png(file="plot3.png")
 }
@@ -39,7 +47,7 @@ lines(mydf$DateTime,mydf$Sub_metering_3,type="l",col=colors[3])
 line.names<-c(names(mydf)[7],names(mydf)[8],names(mydf)[9])
 
 # add a legend
-legend("topright",line.names, cex=0.8, col=colors, lty=c(1,1))
+legend("topright",line.names, col=colors,  lty=c(1,1), bty=legendBty)
 
 # clean up variables
 rm(combined.sub.metering)
